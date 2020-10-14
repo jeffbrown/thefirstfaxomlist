@@ -3,12 +3,18 @@
  */
 package thefirstfaxomlist;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
     public String getGreeting() {
         return "Hello world.";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        List<User> users = new ArrayList<User>();
+        User user = new User("name","username",19,"password" );
+        users.add(user);
+        System.out.println("There are " + users.size() + " users in the system.");
     }
 }
